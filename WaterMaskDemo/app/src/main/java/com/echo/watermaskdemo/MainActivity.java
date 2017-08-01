@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     private WaterMaskView waterMaskView;
     private Bitmap sourBitmap;
+    private Bitmap waterBitmap;
     private Bitmap watermarkBitmap;
 
     private final static int LEFT_TOP=0;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
      * @param position 左上为0，顺时针算起
      */
     private void saveWaterMask(int position) {
-        Bitmap waterBitmap = WaterMaskUtil.convertViewToBitmap(waterMaskView);
+        waterBitmap = WaterMaskUtil.convertViewToBitmap(waterMaskView);
 
         //根据原图处理要生成的水印的宽高
         float width = sourBitmap.getWidth();
@@ -98,6 +99,20 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             case R.id.rb_wartermark_leftbottom:
                 saveWaterMask(LEFT_BOTTOM);
                 break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if (sourBitmap != null) {
+            sourBitmap.recycle();
+            sourBitmap = null;
+        }
+        if (waterBitmap != null) {
+            waterBitmap.recycle();
+            waterBitmap = null;
         }
     }
 
