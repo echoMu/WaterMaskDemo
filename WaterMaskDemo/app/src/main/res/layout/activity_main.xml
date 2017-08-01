@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.echo.watermaskdemo.MainActivity">
+
+    <ImageView
+        android:id="@+id/wartermark_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/pic_03"/>
+
+    <RadioGroup
+        android:id="@+id/rg_wartermark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/wartermark_pic">
+
+        <RadioButton
+            android:id="@+id/rb_wartermark_lefttop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左上角"/>
+
+        <RadioButton
+            android:id="@+id/rb_wartermark_righttop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右上角"/>
+
+        <RadioButton
+            android:id="@+id/rb_wartermark_rightbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="右下角"/>
+
+        <RadioButton
+            android:id="@+id/rb_wartermark_leftbottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="左下角"
+            android:checked="true"/>
+    </RadioGroup>
+
+</RelativeLayout>

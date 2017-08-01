@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WaterMaskView">
+        <!--栏背景色-->
+        <attr name="title_background_color" format="color" />
+        <!--左边按钮是否可见-->
+        <attr name="left_button_visible" format="boolean" />
+        <!--公司文字-->
+        <attr name="company_text" format="string" />
+        <!--公司文字颜色-->
+        <attr name="title_text_color" format="color" />
+        <!--logo文字-->
+        <attr name="logo_button_text" format="string" />
+        <!--左边按钮文字颜色-->
+        <attr name="logo_button_text_color" format="color" />
+        <!--左边按钮图标-->
+        <attr name="logo_button_drawable" format="reference|integer" />
+        <!--相关信息文字-->
+        <attr name="info_text" format="string" />
+        <!--相关信息文字颜色-->
+        <attr name="info_text_color" format="color" />
+        <!--右边按钮图标-->
+        <attr name="right_button_drawable" format="reference|integer" />
+    </declare-styleable>
+
+</resources>
